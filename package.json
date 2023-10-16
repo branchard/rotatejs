@@ -1,0 +1,35 @@
+{
+  "name": "rotatejs",
+  "version": "0.0.0",
+  "repository": "git@github.com:branchard/rotatejs.git",
+  "author": "B. Branchard",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "watch": "tsup --watch",
+    "test": "tsc --noEmit && eslint"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": ">=6.1.0",
+    "@typescript-eslint/parser": ">=6.1.0",
+    "eslint": ">=8.45.0",
+    "eslint-config-xo": "^0.43.1",
+    "eslint-config-xo-typescript": "^1.0.1",
+    "eslint-plugin-unicorn": "^48.0.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  }
+}

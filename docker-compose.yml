@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  dev:
+    image: node:18-alpine
+    user: "$(id -u):$(id -g)"
+    command: sleep infinity
+    volumes:
+      - ./:/app/
+    working_dir: /app/
+    ports:
+      - 20355:5173
+
